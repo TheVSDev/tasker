@@ -34,7 +34,6 @@
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   font-weight: 400;
   outline: none;
@@ -57,4 +56,16 @@
   .btn {
     padding: 10px 30px;
   }
+}
+
+.container {
+    margin-top: 100px;
+    padding: 50px;
+    text-align: center;
+    background: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
