@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="448" height="512">
+	<title>calendar-svg</title>
+	<defs>
+		<image  width="448" height="512" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcAAAAIAAQMAAAAv6y4ZAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAACoUlEQVR4nO2dQZKbMBBFcXnB0kfgKBwNjsZROIKXXrggUQTCwGim9VXBcXh/Nf3VrwpQe6wusCiKtZqh+FIxf1Y5jn2KH1SP4zPFDxp/K8WfdXUJrd0PKl1Cb/eDbi7hbveDKpfwsPtBjUv4YsZiftAYSYj5sy5/EvbXPeZvE1qrH3T1CZ3VDyp9Qm/1g26RhJi/TdjNdMwPqiIJMX+bsCuRmB9U+4TdJy/m54NNJCHmbxN2RRnz88ExkhDztwm7j0HMBwQEBAQEBAT818HrmKQ2gHUaGBaDlzRuOeQyFey1I12OtUkFB/EU5+uafIrzSd7Swbt2bear06SDw6oSUyReVH9ZEyvcq9Nmw8+HMBt+PioFfGjT6CeyORQcxPl3FSDNfwbYaoXjSkcqHFc6MihVXAZ410o1A3zoYK2BzzeAzcHg8AZQ43RwBAQEBAQEBAQEBAQE/OsgQgghhPY6/hsZEBAQEBAQEBAQEBAQ8LPBbTf5fbz82buBl6eufogXsHUDL0+W/RAHcHpCtLHGAZyeSa2tcQCnH4xV1jiA00/UbtY4gL0fKK1xPtj5gas1zgdbP3CxxqcCi0nmGBAQEBAQ8ARg6/1P+Co/Huz8wIFrud4PHLhelZfW8mJebh/khkVukfSmTG4DEwUICAgICAgICAgICAh4VlBtPOVWV22uuf/I/cf/HiwmmWNAQEBAQMATgK33P+Gr/Hiw8wPcf+T+oy1eQO4/AgICAp4NbDTuHdtvymCtge/YRrXSwIw9ZmVQ3oBXBo/fnVjeSFneulkGxX8BRcaG2DJYK+DzdXmeokeRsbG5vJW6vHm7vF28VAHrHsSuYd312PVcN2h23dctoV2+mZRfbSC/TEF/fYP8wojkk5xOUX8pRmqduwovfgEkmlZwRhUzCQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer" href="#img1" x="0" y="0"/>
+</svg>

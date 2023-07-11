@@ -1,0 +1,56 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 120px;
+    height: 60%;
+    width: 72px;
+    background: #fff;
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+    border-radius: 0 17px 17px 0;
+}
+
+.iconContainer {
+    background-color: #28c989;
+    padding: 9px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.iconContainerSeparator {
+    background-color: #28c989;
+    padding: 9px;
+    border-radius: 12px;
+    margin-top: 70px;
+}
+
+.iconContainer:hover, .iconContainerSeparator:hover {
+    background-color: #36393e;
+    cursor: pointer;
+}
+
+.sidebar div .tooltip {
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 15px);
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar div:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}

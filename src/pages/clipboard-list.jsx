@@ -6,15 +6,15 @@ import Title from "@/web/components/Title";
 import Container from "@/web/components/Container";
 import Sidebar from "@/web/components/Sidebar";
 
-// TaskManager function
-export default function TaskManager() {
+// ClipboardList function
+export default function ClipboardList() {
   return (
     <>
       <HeadPage />
       <Main>
         <Sidebar />
         <Container>
-          <Title titleLabel="Task Manager" />
+          <Title titleLabel="Clipboard List" />
         </Container>
       </Main>
       <Footer />
