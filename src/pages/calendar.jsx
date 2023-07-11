@@ -22,7 +22,7 @@ export default function CalendarPage() {
       <HeadPage />
       <Main>
         <Sidebar />
-        <div className="bg-white p-5 mt-28 flex gap-10 sm:divide-x justify-center sm:w-1/2 mx-auto h-[500px] items-center sm:flex-row flex-col">
+        <div className="bg-white rounded-md p-5 mt-28 flex gap-10 sm:divide-x justify-center sm:w-1/2 mx-auto h-[500px] items-center sm:flex-row flex-col">
           <div className="w-96 h-96 ">
             <div className="flex justify-between items-center">
               <h1 className="select-none font-semibold">
@@ -78,9 +78,9 @@ export default function CalendarPage() {
                           today ? "bg-[#28c989] text-white" : "",
                           selectDate.toDate().toDateString() ===
                             date.toDate().toDateString()
-                            ? "bg-black text-white"
+                            ? "bg-[#6a8bb8] text-white"
                             : "",
-                          "h-10 w-10 rounded-full grid place-content-center hover:bg-black hover:text-white transition-all cursor-pointer select-none"
+                          "h-10 w-10 rounded-full grid place-content-center hover:bg-[#6a8bb8] hover:text-white transition-all cursor-pointer select-none"
                         )}
                         onClick={() => {
                           setSelectDate(date);
