@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import React, { useState } from "react";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
+import styles from "@/web/styles/Home.module.css"
 import { generateDate, months } from "@/web/components/Calendar/calendar";
 import cn from "@/web/components/Calendar/cn";
 import Main from "@/web/components/Main";
@@ -98,6 +99,7 @@ export default function CalendarPage() {
               {selectDate.toDate().toDateString()}
             </h1>
           </div>
+          <button className={styles.btnAdd}>+</button>
         </div>
       </Main>
       <Footer />
