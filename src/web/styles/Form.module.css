@@ -1,0 +1,44 @@
+.formContainer {
+    padding: 15px;
+    background: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 36px;
+    /* padding: 20px; */
+    color: #28c989;
+}
+
+/* Button */
+.btn {
+    background-color: #28c989;
+    border: 1px solid #13aa7d;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 9px 17px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    float: right;
+    margin-top: 10px;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}

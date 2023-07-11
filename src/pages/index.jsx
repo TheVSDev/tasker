@@ -23,6 +23,10 @@ export default function Home() {
           </p>
           <br />
           <Link href="/task-manager"><Button btnLabel="Let's organize" /></Link>
+          <br />
+          <br />
+          <Link href="/sign-in"><Button btnLabel="Sign In" /></Link>
+          <Link href="/sign-up"><Button btnLabel="Sign Up" /></Link>
         </div>
       </Main>
       <Footer />
