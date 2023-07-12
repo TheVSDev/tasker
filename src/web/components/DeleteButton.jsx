@@ -4,7 +4,7 @@ const Button = (props) => {
     const { onClick, btnLabel } = props
 
     return (
-        <button className={styles.btn} onClick={onClick}>{btnLabel}</button>
+        <button className={styles.deleteBtn} onClick={onClick}>{btnLabel}</button>
     )
 }
 
