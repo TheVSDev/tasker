@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+}
+
+.lists {
+  flex: 1;
+  padding: 10px;
+}
+
+.tasks {
+  flex: 2;
+}
+
+.listItem {
+  cursor: pointer;
+  padding: 8px;
+  background-color: #46eaa8;
+  color: white;
+  border-radius: 9px;
+}
+
+.hidden {
+  display: none;
+}
+  

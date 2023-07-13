@@ -9,6 +9,7 @@ import Container from "@/web/components/Container";
 import Sidebar from "@/web/components/Sidebar";
 import Button from "@/web/components/Button";
 import DeleteButton from "@/web/components/DeleteButton";
+import Input from "@/web/components/Input";
 
 // ClipboardList function
 export default function ClipboardList() {
@@ -37,10 +38,9 @@ export default function ClipboardList() {
       <Main>
         <Sidebar />
         <Container>
-          <input
+          <Input
             type="text"
             value={task}
-            className={styles.input}
             onChange={handleTaskChange}
             placeholder="Enter an item"
           />
