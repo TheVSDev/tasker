@@ -62,7 +62,7 @@
 .deleteBtn {
   background-color: #ea0000;
   border: 1px solid #ff0000;
-  border-radius: 4px;
+  border-radius: 6px;
   box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
   box-sizing: border-box;
   color: #fff;
