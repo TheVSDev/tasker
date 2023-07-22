@@ -10,6 +10,8 @@ import Container from "@/web/components/Container";
 import Sidebar from "@/web/components/Sidebar";
 import Button from "@/web/components/Button";
 import Input from "@/web/components/Input";
+import DeleteButton from "@/web/components/DeleteButton"
+
 
 // TaskManager function
 export default function TaskManager() {
@@ -47,6 +49,18 @@ export default function TaskManager() {
     setCurrentList(lists[listIndex].listName);
   };
 
+  const handleDeleteList = (listIndex) => {
+    const updatedLists = [...lists];
+    updatedLists.splice(listIndex, 1);
+    setLists(updatedLists);
+  };
+
+  // const handleDeleteTask = (listIndex, taskIndex) => {
+  //   const updatedLists = [...lists];
+  //   updatedLists[listIndex].tasks.splice(taskIndex, 1);
+  //   setLists(updatedLists);
+  // };
+
   return (
     <>
       <HeadPage />
@@ -73,18 +87,18 @@ export default function TaskManager() {
                     onClick={() => handleListClick(index)}
                   >
                     {list.listName}
+                    <DeleteButton onClick={handleDeleteList} btnLabel="X" />
                   </li>
                 ))}
               </ul>
             </div>
             <div className={styles.tasks}>
-            <Title titleLabel="TASKS" />
               {lists.map((list, index) => (
                 <div
-                  key={index}
-                  className={currentList === list.listName ? "" : styles.hidden}
+                key={index}
+                className={currentList === list.listName ? "" : styles.hidden}
                 >
-                  <h3>{list.listName}</h3>
+                  <Title titleLabel={list.listName} />
                   <form onSubmit={(event) => handleTaskSubmit(event, index)}>
                     <Input
                       type="text"
@@ -97,7 +111,7 @@ export default function TaskManager() {
                   <ul>
                     {list.tasks.map((task, taskIndex) => (
                       <li key={taskIndex}>{task}</li>
-                    ))}
+                      ))}
                   </ul>
                 </div>
               ))}
