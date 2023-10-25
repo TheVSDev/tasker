@@ -42,4 +42,4 @@ It was created using MERN stack and Next.js (Pages Router).
 
 ## Author
 
-- Website - [Veljko Spasic](https://veljkospasic.rf.gd)
+- Website - [Veljko Spasic](https://veljko-spasic.rf.gd)
