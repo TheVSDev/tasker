@@ -20,7 +20,11 @@ const initialValues = {
 
 const validationSchema = yup.object().shape({
   username: yup.string().required("Username is required").label("Username"),
-  password: yup.string().min(8).required("Password is required").label("Password"),
+  password: yup
+    .string()
+    .min(8)
+    .required("Password is required")
+    .label("Password"),
 })
 
 // SignIn function
@@ -29,9 +33,9 @@ const SignIn = () => {
   // const {
   //   actions: { signIn },
   // } = useContext(AppContext)
-  
+
   // Function to be executed when the form is submitted
-/*  const handleSubmit = async (values) => {
+  /*  const handleSubmit = async (values) => {
     const { username, password } = values
     const [err] = await signIn(username, password)
   
@@ -67,7 +71,14 @@ const SignIn = () => {
           <br />
           <br />
           <br />
-          <span className="text-sm">You don&apos;t have an account ? <br /><Link href="/sign-up" className="text-green-500">Create one</Link></span><br /><br />
+          <span className="text-sm">
+            You don&apos;t have an account ? <br />
+            <Link href="/sign-up" className="text-green-500">
+              Create one
+            </Link>
+          </span>
+          <br />
+          <br />
         </Form>
       </Main>
       <Footer />

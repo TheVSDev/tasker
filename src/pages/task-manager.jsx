@@ -1,59 +1,58 @@
 // Imports
-import { useState } from "react";
+import { useState } from "react"
 
-import styles from "@/web/styles/TaskManager.module.css";
-import Main from "@/web/components/Main";
-import Footer from "@/web/components/Footer";
-import Title from "@/web/components/Title";
-import HeadPage from "@/web/components/HeadPage";
-import Container from "@/web/components/Container";
-import Sidebar from "@/web/components/Sidebar";
-import Button from "@/web/components/Button";
-import Input from "@/web/components/Input";
+import styles from "@/web/styles/TaskManager.module.css"
+import Main from "@/web/components/Main"
+import Footer from "@/web/components/Footer"
+import Title from "@/web/components/Title"
+import HeadPage from "@/web/components/HeadPage"
+import Container from "@/web/components/Container"
+import Sidebar from "@/web/components/Sidebar"
+import Button from "@/web/components/Button"
+import Input from "@/web/components/Input"
 import DeleteButton from "@/web/components/DeleteButton"
-
 
 // TaskManager function
 export default function TaskManager() {
-  const [lists, setLists] = useState([]);
-  const [currentList, setCurrentList] = useState("");
-  const [task, setTask] = useState("");
+  const [lists, setLists] = useState([])
+  const [currentList, setCurrentList] = useState("")
+  const [task, setTask] = useState("")
 
   const handleListChange = (event) => {
-    setCurrentList(event.target.value);
-  };
+    setCurrentList(event.target.value)
+  }
 
   const handleTaskChange = (event) => {
-    setTask(event.target.value);
-  };
+    setTask(event.target.value)
+  }
 
   const handleListSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     if (currentList.trim() !== "") {
-      setLists([...lists, { listName: currentList, tasks: [] }]);
-      setCurrentList("");
+      setLists([...lists, { listName: currentList, tasks: [] }])
+      setCurrentList("")
     }
-  };
+  }
 
   const handleTaskSubmit = (event, listIndex) => {
-    event.preventDefault();
+    event.preventDefault()
     if (task.trim() !== "") {
-      const updatedLists = [...lists];
-      updatedLists[listIndex].tasks.push(task);
-      setLists(updatedLists);
-      setTask("");
+      const updatedLists = [...lists]
+      updatedLists[listIndex].tasks.push(task)
+      setLists(updatedLists)
+      setTask("")
     }
-  };
+  }
 
   const handleListClick = (listIndex) => {
-    setCurrentList(lists[listIndex].listName);
-  };
+    setCurrentList(lists[listIndex].listName)
+  }
 
   const handleDeleteList = (listIndex) => {
-    const updatedLists = [...lists];
-    updatedLists.splice(listIndex, 1);
-    setLists(updatedLists);
-  };
+    const updatedLists = [...lists]
+    updatedLists.splice(listIndex, 1)
+    setLists(updatedLists)
+  }
 
   // const handleDeleteTask = (listIndex, taskIndex) => {
   //   const updatedLists = [...lists];
@@ -95,8 +94,8 @@ export default function TaskManager() {
             <div className={styles.tasks}>
               {lists.map((list, index) => (
                 <div
-                key={index}
-                className={currentList === list.listName ? "" : styles.hidden}
+                  key={index}
+                  className={currentList === list.listName ? "" : styles.hidden}
                 >
                   <Title titleLabel={list.listName} />
                   <form onSubmit={(event) => handleTaskSubmit(event, index)}>
@@ -111,7 +110,7 @@ export default function TaskManager() {
                   <ul>
                     {list.tasks.map((task, taskIndex) => (
                       <li key={taskIndex}>{task}</li>
-                      ))}
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -121,5 +120,5 @@ export default function TaskManager() {
       </Main>
       <Footer />
     </>
-  );
+  )
 }

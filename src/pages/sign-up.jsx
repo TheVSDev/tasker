@@ -22,23 +22,23 @@ const validationSchema = yup.object().shape({
   username: yup.string().min(1).required("Username is required").label("Name"),
   email: yup.string().email().required("E-mail is required").label("E-mail"),
   password: yup
-  .string()
-  .min(8)
-  .matches(/^.*(?=.*[0-9]+).*$/, "Password must contain a number")
-  .matches(
-    /^.*(?=.*\p{Ll}+).*$/u,
-    "Password must contain a lower case letter"
-  )
-  .matches(
-    /^.*(?=.*\p{Lu}+).*$/u,
-    "Password must contain a upper case letter"
-  )
-  .matches(
-    /^.*(?=.*[^0-9\p{L}]+).*$/u,
-    "Password must contain a special character"
-  )
-  .required("Password is required")
-  .label("Password"),
+    .string()
+    .min(8)
+    .matches(/^.*(?=.*[0-9]+).*$/, "Password must contain a number")
+    .matches(
+      /^.*(?=.*\p{Ll}+).*$/u,
+      "Password must contain a lower case letter"
+    )
+    .matches(
+      /^.*(?=.*\p{Lu}+).*$/u,
+      "Password must contain a upper case letter"
+    )
+    .matches(
+      /^.*(?=.*[^0-9\p{L}]+).*$/u,
+      "Password must contain a special character"
+    )
+    .required("Password is required")
+    .label("Password"),
 })
 
 // SignUp function
@@ -82,7 +82,14 @@ const SignUp = () => {
           <br />
           <br />
           <br />
-          <span className="text-sm">You already have an account ? <br /><Link href="/sign-in" className="text-green-500">Log in</Link></span><br /><br />
+          <span className="text-sm">
+            You already have an account ? <br />
+            <Link href="/sign-in" className="text-green-500">
+              Log in
+            </Link>
+          </span>
+          <br />
+          <br />
         </Form>
       </Main>
       <Footer />

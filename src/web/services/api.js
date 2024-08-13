@@ -21,7 +21,7 @@ const call =
     return axios[method](path, method === "get" ? opts : data, opts)
   }
 
-  // CRUD
+// CRUD
 const api = {
   post: call("post"), // Create
   get: call("get"), // Read

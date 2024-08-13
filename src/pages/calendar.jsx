@@ -1,22 +1,22 @@
 // Imports
-import dayjs from "dayjs";
-import React, { useState } from "react";
-import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import dayjs from "dayjs"
+import React, { useState } from "react"
+import { GrFormNext, GrFormPrevious } from "react-icons/gr"
 
 import styles from "@/web/styles/Home.module.css"
-import { generateDate, months } from "@/web/components/Calendar/calendar";
-import cn from "@/web/components/Calendar/cn";
-import Main from "@/web/components/Main";
-import Footer from "@/web/components/Footer";
-import HeadPage from "@/web/components/HeadPage";
-import Sidebar from "@/web/components/Sidebar";
+import { generateDate, months } from "@/web/components/Calendar/calendar"
+import cn from "@/web/components/Calendar/cn"
+import Main from "@/web/components/Main"
+import Footer from "@/web/components/Footer"
+import HeadPage from "@/web/components/HeadPage"
+import Sidebar from "@/web/components/Sidebar"
 
 // CalendarPage function
 export default function CalendarPage() {
-  const days = ["S", "M", "T", "W", "T", "F", "S"];
-  const currentDate = dayjs();
-  const [today, setToday] = useState(currentDate);
-  const [selectDate, setSelectDate] = useState(currentDate);
+  const days = ["S", "M", "T", "W", "T", "F", "S"]
+  const currentDate = dayjs()
+  const [today, setToday] = useState(currentDate)
+  const [selectDate, setSelectDate] = useState(currentDate)
   return (
     <>
       <HeadPage />
@@ -32,13 +32,13 @@ export default function CalendarPage() {
                 <GrFormPrevious
                   className="w-5 h-5 cursor-pointer hover:scale-105 transition-all"
                   onClick={() => {
-                    setToday(today.month(today.month() - 1));
+                    setToday(today.month(today.month() - 1))
                   }}
                 />
                 <h1
                   className=" cursor-pointer hover:scale-105 transition-all"
                   onClick={() => {
-                    setToday(currentDate);
+                    setToday(currentDate)
                   }}
                 >
                   Today
@@ -46,7 +46,7 @@ export default function CalendarPage() {
                 <GrFormNext
                   className="w-5 h-5 cursor-pointer hover:scale-105 transition-all"
                   onClick={() => {
-                    setToday(today.month(today.month() + 1));
+                    setToday(today.month(today.month() + 1))
                   }}
                 />
               </div>
@@ -60,7 +60,7 @@ export default function CalendarPage() {
                   >
                     {day}
                   </h1>
-                );
+                )
               })}
             </div>
 
@@ -83,13 +83,13 @@ export default function CalendarPage() {
                           "h-10 w-10 rounded-full grid place-content-center hover:bg-[#6a8bb8] hover:text-white transition-all cursor-pointer select-none"
                         )}
                         onClick={() => {
-                          setSelectDate(date);
+                          setSelectDate(date)
                         }}
                       >
                         {date.date()}
                       </h1>
                     </div>
-                  );
+                  )
                 }
               )}
             </div>
@@ -104,5 +104,5 @@ export default function CalendarPage() {
       </Main>
       <Footer />
     </>
-  );
+  )
 }

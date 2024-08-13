@@ -1,8 +1,8 @@
 // Imports
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
-import styles from "@/web/styles/Sidebar.module.css";
+import styles from "@/web/styles/Sidebar.module.css"
 
 // Sidebar function
 const Sidebar = () => {
@@ -17,7 +17,7 @@ const Sidebar = () => {
               width={44}
               height={28}
             />
-        <span className={styles.tooltip}>Task Manager</span>
+            <span className={styles.tooltip}>Task Manager</span>
           </div>
         </Link>
         <Link href="/calendar">
@@ -28,7 +28,7 @@ const Sidebar = () => {
               width={44}
               height={28}
             />
-        <span className={styles.tooltip}>Calendar</span>
+            <span className={styles.tooltip}>Calendar</span>
           </div>
         </Link>
         <Link href="/clipboard-list">
@@ -39,7 +39,7 @@ const Sidebar = () => {
               width={44}
               height={20}
             />
-        <span className={styles.tooltip}>Clipboard List</span>
+            <span className={styles.tooltip}>Clipboard List</span>
           </div>
         </Link>
         <Link href="/profile">
@@ -50,7 +50,7 @@ const Sidebar = () => {
               width={44}
               height={28}
             />
-        <span className={styles.tooltip}>Profile</span>
+            <span className={styles.tooltip}>Profile</span>
           </div>
         </Link>
         <Link href="/">
@@ -61,12 +61,12 @@ const Sidebar = () => {
               width={44}
               height={28}
             />
-        <span className={styles.tooltip}>Log out</span>
+            <span className={styles.tooltip}>Log out</span>
           </div>
         </Link>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

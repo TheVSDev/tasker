@@ -16,11 +16,13 @@ const FormField = (props) => {
               {
                 "focus:border-pink-600": !error || !touched,
                 "border-red-600": error && touched,
-              },
+              }
             )}
           />
           {error && touched && (
-            <span className="text-sm font-medium text-red-500 mb-2">{error}</span>
+            <span className="text-sm font-medium text-red-500 mb-2">
+              {error}
+            </span>
           )}
         </label>
       )}

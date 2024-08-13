@@ -8,10 +8,7 @@ const Form = (props) => {
 
   return (
     <Formik {...otherProps}>
-      <FormikForm
-        noValidate
-        className={styles.formContainer}
-      >
+      <FormikForm noValidate className={styles.formContainer}>
         <h2 className={styles.title}>{title}</h2>
         {children}
       </FormikForm>
