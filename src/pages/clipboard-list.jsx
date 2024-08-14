@@ -3,8 +3,6 @@ import { useState } from "react"
 
 import styles from "@/web/styles/List.module.css"
 import Main from "@/web/components/Main"
-import Footer from "@/web/components/Footer"
-import HeadPage from "@/web/components/HeadPage"
 import Container from "@/web/components/Container"
 import Sidebar from "@/web/components/Sidebar"
 import Button from "@/web/components/Button"
@@ -33,33 +31,29 @@ const ClipboardList = () => {
     setTodos(updatedTodos)
   }
   return (
-    <>
-      <HeadPage />
-      <Main>
-        <Sidebar />
-        <Container>
-          <Input
-            type="text"
-            value={task}
-            onChange={handleTaskChange}
-            placeholder="Enter an item"
-          />
-          <Button btnLabel="Add" onClick={handleAddTodo} />
-          <ul>
-            {todos.map((todo, index) => (
-              <li key={index} className={styles.listItem}>
-                <span>{todo}</span>
-                <DeleteButton
-                  btnLabel="Delete"
-                  onClick={() => handleDeleteTodo(index)}
-                />
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </Main>
-      <Footer />
-    </>
+    <Main>
+      <Sidebar />
+      <Container>
+        <Input
+          type="text"
+          value={task}
+          onChange={handleTaskChange}
+          placeholder="Enter an item"
+        />
+        <Button btnLabel="Add" onClick={handleAddTodo} />
+        <ul>
+          {todos.map((todo, index) => (
+            <li key={index} className={styles.listItem}>
+              <span>{todo}</span>
+              <DeleteButton
+                btnLabel="Delete"
+                onClick={() => handleDeleteTodo(index)}
+              />
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </Main>
   )
 }
 

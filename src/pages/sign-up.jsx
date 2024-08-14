@@ -3,9 +3,7 @@ import * as yup from "yup"
 import { useRouter } from "next/router.js"
 import Link from "next/link"
 
-import HeadPage from "@/web/components/HeadPage"
 import Main from "@/web/components/Main"
-import Footer from "@/web/components/Footer"
 import Form from "@/web/components/Form.jsx"
 import FormField from "@/web/components/FormField.jsx"
 import SubmitButton from "@/web/components/SubmitButton.jsx"
@@ -55,45 +53,41 @@ const SignUp = () => {
   }
 
   return (
-    <>
-      <HeadPage />
-      <Main>
+    <Main>
+      <br />
+      <Form
+        title="SIGN UP"
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        <FormField name="username" placeholder="Username" label="Username" />
+        <FormField
+          name="email"
+          type="email"
+          placeholder="E-mail"
+          label="E-mail"
+        />
+        <FormField
+          name="password"
+          type="password"
+          placeholder="Password"
+          label="Password"
+        />
+        <SubmitButton btnLabel="Create account" />
         <br />
-        <Form
-          title="SIGN UP"
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-        >
-          <FormField name="username" placeholder="Username" label="Username" />
-          <FormField
-            name="email"
-            type="email"
-            placeholder="E-mail"
-            label="E-mail"
-          />
-          <FormField
-            name="password"
-            type="password"
-            placeholder="Password"
-            label="Password"
-          />
-          <SubmitButton btnLabel="Create account" />
-          <br />
-          <br />
-          <br />
-          <span className="text-sm">
-            You already have an account ? <br />
-            <Link href="/sign-in" className="text-green-500">
-              Log in
-            </Link>
-          </span>
-          <br />
-          <br />
-        </Form>
-      </Main>
-      <Footer />
-    </>
+        <br />
+        <br />
+        <span className="text-sm">
+          You already have an account ? <br />
+          <Link href="/sign-in" className="text-green-500">
+            Log in
+          </Link>
+        </span>
+        <br />
+        <br />
+      </Form>
+    </Main>
   )
 }
 

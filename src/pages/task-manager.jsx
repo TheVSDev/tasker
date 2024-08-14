@@ -3,9 +3,7 @@ import { useState } from "react"
 
 import styles from "@/web/styles/TaskManager.module.css"
 import Main from "@/web/components/Main"
-import Footer from "@/web/components/Footer"
 import Title from "@/web/components/Title"
-import HeadPage from "@/web/components/HeadPage"
 import Container from "@/web/components/Container"
 import Sidebar from "@/web/components/Sidebar"
 import Button from "@/web/components/Button"
@@ -61,65 +59,61 @@ const TaskManager = () => {
   // };
 
   return (
-    <>
-      <HeadPage />
-      <Main>
-        <Sidebar />
-        <Container>
-          <div className={styles.container}>
-            <div className={styles.lists}>
-              <Title titleLabel="LISTS" />
-              <form onSubmit={handleListSubmit}>
-                <Input
-                  type="text"
-                  value={currentList}
-                  onChange={handleListChange}
-                  placeholder="Enter list name"
-                />
-                <Button btnLabel="Create List" type="submit" />
-              </form>
-              <ul>
-                {lists.map((list, index) => (
-                  <li
-                    key={index}
-                    className={styles.listItem}
-                    onClick={() => handleListClick(index)}
-                  >
-                    {list.listName}
-                    <DeleteButton onClick={handleDeleteList} btnLabel="X" />
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className={styles.tasks}>
+    <Main>
+      <Sidebar />
+      <Container>
+        <div className={styles.container}>
+          <div className={styles.lists}>
+            <Title titleLabel="LISTS" />
+            <form onSubmit={handleListSubmit}>
+              <Input
+                type="text"
+                value={currentList}
+                onChange={handleListChange}
+                placeholder="Enter list name"
+              />
+              <Button btnLabel="Create List" type="submit" />
+            </form>
+            <ul>
               {lists.map((list, index) => (
-                <div
+                <li
                   key={index}
-                  className={currentList === list.listName ? "" : styles.hidden}
+                  className={styles.listItem}
+                  onClick={() => handleListClick(index)}
                 >
-                  <Title titleLabel={list.listName} />
-                  <form onSubmit={(event) => handleTaskSubmit(event, index)}>
-                    <Input
-                      type="text"
-                      value={task}
-                      onChange={handleTaskChange}
-                      placeholder="Enter task"
-                    />
-                    <Button btnLabel="Add task" type="submit" />
-                  </form>
-                  <ul>
-                    {list.tasks.map((task, taskIndex) => (
-                      <li key={taskIndex}>{task}</li>
-                    ))}
-                  </ul>
-                </div>
+                  {list.listName}
+                  <DeleteButton onClick={handleDeleteList} btnLabel="X" />
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </Container>
-      </Main>
-      <Footer />
-    </>
+          <div className={styles.tasks}>
+            {lists.map((list, index) => (
+              <div
+                key={index}
+                className={currentList === list.listName ? "" : styles.hidden}
+              >
+                <Title titleLabel={list.listName} />
+                <form onSubmit={(event) => handleTaskSubmit(event, index)}>
+                  <Input
+                    type="text"
+                    value={task}
+                    onChange={handleTaskChange}
+                    placeholder="Enter task"
+                  />
+                  <Button btnLabel="Add task" type="submit" />
+                </form>
+                <ul>
+                  {list.tasks.map((task, taskIndex) => (
+                    <li key={taskIndex}>{task}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </Main>
   )
 }
 
