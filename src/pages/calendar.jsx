@@ -12,11 +12,12 @@ import HeadPage from "@/web/components/HeadPage"
 import Sidebar from "@/web/components/Sidebar"
 
 // CalendarPage function
-export default function CalendarPage() {
+const CalendarPage = () => {
   const days = ["S", "M", "T", "W", "T", "F", "S"]
   const currentDate = dayjs()
   const [today, setToday] = useState(currentDate)
   const [selectDate, setSelectDate] = useState(currentDate)
+
   return (
     <>
       <HeadPage />
@@ -106,3 +107,5 @@ export default function CalendarPage() {
     </>
   )
 }
+
+export default CalendarPage

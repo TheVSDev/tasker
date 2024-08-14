@@ -13,7 +13,7 @@ import Input from "@/web/components/Input"
 import DeleteButton from "@/web/components/DeleteButton"
 
 // TaskManager function
-export default function TaskManager() {
+const TaskManager = () => {
   const [lists, setLists] = useState([])
   const [currentList, setCurrentList] = useState("")
   const [task, setTask] = useState("")
@@ -122,3 +122,5 @@ export default function TaskManager() {
     </>
   )
 }
+
+export default TaskManager

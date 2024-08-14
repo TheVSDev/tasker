@@ -7,17 +7,15 @@ import Container from "@/web/components/Container"
 import Sidebar from "@/web/components/Sidebar"
 
 // Profile function
-export default function Profile() {
-  return (
-    <>
-      <HeadPage />
-      <Main>
-        <Sidebar />
-        <Container>
-          <Title titleLabel="Profile" />
-        </Container>
-      </Main>
-      <Footer />
-    </>
-  )
-}
+const Profile = () => (
+  <>
+    <HeadPage />
+    <Main>
+      <Sidebar />
+      <Container>
+        <Title titleLabel="Profile" />
+      </Container>
+    </Main>
+    <Footer />
+  </>
+)

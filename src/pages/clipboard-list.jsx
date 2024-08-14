@@ -12,7 +12,7 @@ import DeleteButton from "@/web/components/DeleteButton"
 import Input from "@/web/components/Input"
 
 // ClipboardList function
-export default function ClipboardList() {
+const ClipboardList = () => {
   const [task, setTask] = useState("")
   const [todos, setTodos] = useState([])
 
@@ -62,3 +62,5 @@ export default function ClipboardList() {
     </>
   )
 }
+
+export default ClipboardList
