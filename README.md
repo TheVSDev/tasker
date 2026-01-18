@@ -19,7 +19,7 @@ It was created using MERN stack and Next.js (Pages Router).
 
 ### Links
 
-- Github repository: [https://github.com/TheVSDev/tasker](https://github.com/TheVSDev/tasker)
+- Github repository: [https://github.com/veljko-03/tasker](https://github.com/veljko-03/tasker)
 
 ## My process
 
@@ -40,4 +40,4 @@ It was created using MERN stack and Next.js (Pages Router).
 
 #### DB
 
-- MongoDB
+- PostgreSQL

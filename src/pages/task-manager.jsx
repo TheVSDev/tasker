@@ -60,20 +60,22 @@ const TaskManager = () => {
 
   return (
     <Main>
+      <Container>
+        <Title titleLabel="LISTS" />
+        <form onSubmit={handleListSubmit}>
+          <Input
+            type="text"
+            value={currentList}
+            onChange={handleListChange}
+            placeholder="Enter list name"
+          />
+          <Button btnLabel="Create List" type="submit" />
+        </form>
+      </Container>
       <Sidebar />
       <Container>
         <div className={styles.container}>
           <div className={styles.lists}>
-            <Title titleLabel="LISTS" />
-            <form onSubmit={handleListSubmit}>
-              <Input
-                type="text"
-                value={currentList}
-                onChange={handleListChange}
-                placeholder="Enter list name"
-              />
-              <Button btnLabel="Create List" type="submit" />
-            </form>
             <ul>
               {lists.map((list, index) => (
                 <li
